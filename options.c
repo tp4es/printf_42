@@ -12,7 +12,7 @@
 
 # include "printf.h"
 
-void    cases(char , va_list args)
+void    cases(int c, va_list args)
 {
     if (c == 'c') //single char
         ft_printchar(va_arg(args, int));
