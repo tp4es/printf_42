@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printchar.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tide-oli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/11 14:53:15 by tide-oli          #++    #+#             */
-/*   Updated: 2026/02/11 14:53:17 by tide-oli         ###   ########.fr       */
+/*   Created: 2026/02/11 17:06:02 by tide-oli          #++    #+#             */
+/*   Updated: 2026/02/11 17:06:06 by tide-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+# include "printf.h"
+# include "libft.h"
 
-#endif
+void    ft_printchar(char c)
+{
+    if (ft_isalpha(c))
+    {
+        write(1, &c, 1);
+    }
+    else if (c == '%')
+    {
+
+    }
+}
