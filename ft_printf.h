@@ -12,5 +12,11 @@
 
 #ifndef PRINTF_H
 # define PRINTF_H
+# include <stdarg.h>
+# include <unistd.h>
+int     ft_printf(const char *format, ...);
+void    cases(char c, va_list args);
+void    ft_printchar(char c);
+void    ft_printstring(char *str);
 
 #endif

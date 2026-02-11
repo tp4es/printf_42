@@ -13,7 +13,7 @@
 # include "printf.h"
 # include "libft.h"
 
-void    ft_printchar(char c)
+void    ft_printchar(int c)
 {
     if (ft_isalpha(c))
     {
