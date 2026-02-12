@@ -11,16 +11,13 @@
 /* ************************************************************************** */
 
 # include "printf.h"
-# include "libft.h"
 
 void    ft_printchar(int c)
 {
-    if (ft_isalpha(c))
+    if (c <= 127 && c >= 0)
     {
         write(1, &c, 1);
     }
     else if (c == '%')
-    {
-
-    }
+        write(1, "%", 1);
 }

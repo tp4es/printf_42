@@ -24,11 +24,12 @@ int ft_printf(const char *format, ...)
         if (format[i] == '%')
         {
             i++;
-            cases(format[i], args);
+            cases(format[i], args, &i);
         }
         else
             ft_printchar(format[i]);
         i++;
     }
     va_end(args);
+    return (i);
 }
