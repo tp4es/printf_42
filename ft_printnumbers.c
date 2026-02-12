@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tide-oli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/11 17:07:17 by tide-oli          #++    #+#             */
-/*   Updated: 2026/02/11 17:07:20 by tide-oli         ###   ########.fr       */
+/*   Created: 2026/02/11 17:07:17 by tide-oli          #+#    #+#             */
+/*   Updated: 2026/02/12 23:52:51 by tide-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_printnumbers(int n)
 {
-	long number;
-	char str;
-	int i;
+	long	number;
+	char	str;
+	int		i;
 
 	i = 0;
 	number = n;

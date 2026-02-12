@@ -14,7 +14,7 @@
 
 int	ft_printchar(int n)
 {
-	char c;
+	char	c;
 
 	c = (char)n;
 	if ((c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A'))

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tide-oli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/11 17:06:47 by tide-oli          #++    #+#             */
-/*   Updated: 2026/02/11 17:06:50 by tide-oli         ###   ########.fr       */
+/*   Created: 2026/02/11 17:06:47 by tide-oli          #+#    #+#             */
+/*   Updated: 2026/02/12 23:53:44 by tide-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int	ft_printvoid(void *v)
 {
+	unsigned long	n;
+
+	n = (unsigned long)v;
 	write(1, "0x", 2);
-	write(1, '0', 1);
-	return (0);
+	return (ft_printhex(n, "0123456789abcdef") + 2);
 }

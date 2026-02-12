@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tide-oli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/11 14:51:26 by tide-oli          #++    #+#             */
-/*   Updated: 2026/02/11 14:51:31 by tide-oli         ###   ########.fr       */
+/*   Created: 2026/02/11 14:51:26 by tide-oli          #+#    #+#             */
+/*   Updated: 2026/02/12 23:48:54 by tide-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_printf(const char *format, ...)
 {
-	va_list args;
-	int i;
-	int go;
+	va_list	args;
+	int		i;
+	int		go;
 
 	i = 0;
 	go = -1;
