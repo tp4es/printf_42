@@ -10,11 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "printf.h"
+#include "ft_printf.h"
 
-void ft_printhex(unsigned int n, char *base)
+int	ft_printhex(unsigned int n, char *base)
 {
-    if (n >= 16)
-        ft_printhex(n / 16, base);
-    ft_printchar(base[n % 16]); 
+	int	i;
+
+	i = 0;
+	if (n >= 16)
+	{
+		ft_printhex(n / 16, base);
+		i++;
+	}
+	write(1, &base[n % 16], 1);
+	return ((i + 1));
 }

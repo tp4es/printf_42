@@ -10,26 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h"
+#include "ft_printf.h"
 
-int ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
-    va_list args;
-    int i;
+	va_list args;
+	int i;
+	int go;
 
-    i = 0;
-    va_start(args, format);
-    while (format[i] && i >= 0)
-    {
-        if (format[i] == '%')
-        {
-            i++;
-            i = cases(format[i], args);
-        }
-        else
-            write(1, &format[i], 1);
-        i++;
-    }
-    va_end(args);
-    return (i);
+	i = 0;
+	go = -1;
+	va_start(args, format);
+	while (format[i] && i >= 0)
+	{
+		if (format[i] == '%')
+		{
+			i++;
+			go += options(format[i], args);
+		}
+		else
+			write(1, &format[i], 1);
+		i++;
+	}
+	va_end(args);
+	return (go);
 }

@@ -10,21 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "printf.h"
+#include "ft_printf.h"
 
-void    ft_printnumbers(int i)
+int	ft_printnumbers(int n)
 {
-    long    number;
-    char    str;
+	long number;
+	char str;
+	int i;
 
-    number = i;
-    if (number < 0)
-    {
-        write(1, "-", 1);
-        number = -number;
-    }
-    if (number > 9)
-        ft_printnumbers(number / 10);
-    str = (number % 10) + '0';
-    write(1, &str, 1);
+	i = 0;
+	number = n;
+	if (number < 0)
+	{
+		write(1, "-", 1);
+		number = -number;
+		i++;
+	}
+	if (number > 9)
+	{
+		ft_printnumbers(number / 10);
+		i++;
+	}
+	str = (number % 10) + '0';
+	write(1, &str, 1);
+	return ((i + 1));
 }

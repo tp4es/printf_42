@@ -10,19 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "printf.h"
+#include "ft_printf.h"
 
-int    ft_printchar(int c)
+int	ft_printchar(int c)
 {
-    if ((c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A'))
-    {
-        write(1, &c, 1);
-        return (1);
-    }
-    else if (c == '%')
-    {
-        write(1, "%", 1);
-        return (1);
-    }
-    return (-2);
+	if ((c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A'))
+	{
+		write(1, (char)&c, 1);
+		return (1);
+	}
+	else if (c == '%')
+	{
+		write(1, "%", 1);
+		return (1);
+	}
+	return (-2);
 }

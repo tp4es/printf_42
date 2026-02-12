@@ -14,9 +14,11 @@
 # define PRINTF_H
 # include <stdarg.h>
 # include <unistd.h>
-int     ft_printf(const char *format, ...);
-void    cases(char c, va_list args);
-void    ft_printchar(char c);
-void    ft_printstring(char *str);
 
+int	ft_printf(const char *format, ...);
+int	options(int c, va_list args);
+int	ft_printchar(int c);
+int	ft_printstring(char *str);
+int	ft_printhex(unsigned int n, char *base);
+int	ft_printvoid(void *);
 #endif
