@@ -12,11 +12,14 @@
 
 #include "ft_printf.h"
 
-int	ft_printchar(int c)
+int	ft_printchar(int n)
 {
+	char c;
+
+	c = (char)n;
 	if ((c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A'))
 	{
-		write(1, (char)&c, 1);
+		write(1, &c, 1);
 		return (1);
 	}
 	else if (c == '%')

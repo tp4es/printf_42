@@ -20,5 +20,6 @@ int	options(int c, va_list args);
 int	ft_printchar(int c);
 int	ft_printstring(char *str);
 int	ft_printhex(unsigned int n, char *base);
-int	ft_printvoid(void *);
+int	ft_printvoid(void *v);
+int	ft_printnumbers(int n);
 #endif
