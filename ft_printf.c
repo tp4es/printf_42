@@ -19,15 +19,15 @@ int ft_printf(const char *format, ...)
 
     i = 0;
     va_start(args, format);
-    while (format[i])
+    while (format[i] && i >= 0)
     {
         if (format[i] == '%')
         {
             i++;
-            cases(format[i], args, &i);
+            i = cases(format[i], args);
         }
         else
-            ft_printchar(format[i]);
+            write(1, &format[i], 1);
         i++;
     }
     va_end(args);

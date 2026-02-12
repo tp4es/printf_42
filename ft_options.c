@@ -12,22 +12,24 @@
 
 # include "printf.h"
 
-void    cases(char *va_arg)
+int    cases(char *va_arg)
 {
     if (*va_arg == 'c') //single char
-        ft_printchar(*va_arg);
+        return (ft_printchar(*va_arg, char));
     else if (c == 's') //string char
-        ft_printstring(va_arg);
+        return (ft_printstring(va_arg, char*));
     else if (c == 'p') //void*
-        ;
+        return (ft_printvoid(va_arg, void*));
     else if (c == 'd' || c == 'i') //digit or decimal int
-        ;
+        return (ft_printnumbers(va_arg, int));
     else if (c == 'u') //unsigned decimal int
-        ;
+        return (ft_printnumbers(va_arg, unsigned int));
     else if (c == 'x') //hexadecimal lower
-        ;
+        return (ft_printhexadecimal(va_arg, unsigned int, "0123456789abcdef"));
     else if (c == 'X') //hexadecimal upper
-        ;
+        return (ft_printhexadecimal(va_arg, unsigned int, "0123456789ABCDEF"));
     else if (c == '%') //% symbol
-        ;
+        return (ft_printchar('%'));
+    else
+        return(-2);
 }
