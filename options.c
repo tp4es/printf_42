@@ -29,6 +29,6 @@ int	options(int c, va_list args)
 	else if (c == 'X')
 		return (ft_printhex(va_arg(args, unsigned int), "0123456789ABCDEF"));
 	else if (c == '%')
-		return (ft_printchar('c'));
-	return (-2);
+		return (ft_printchar('%'));
+	return (-1);
 }

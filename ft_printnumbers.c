@@ -12,14 +12,12 @@
 
 #include "ft_printf.h"
 
-int	ft_printnumbers(int n)
+int	ft_printnumbers(long number)
 {
-	long	number;
 	char	str;
 	int		i;
 
 	i = 0;
-	number = n;
 	if (number < 0)
 	{
 		write(1, "-", 1);
@@ -28,10 +26,9 @@ int	ft_printnumbers(int n)
 	}
 	if (number > 9)
 	{
-		ft_printnumbers(number / 10);
-		i++;
+		i += ft_printnumbers(number / 10);
 	}
 	str = (number % 10) + '0';
-	write(1, &str, 1);
-	return ((i + 1));
+	ft_printchar(str);
+	return (i + 1);
 }

@@ -19,9 +19,9 @@ int	ft_printf(const char *format, ...)
 	int		go;
 
 	i = 0;
-	go = -1;
+	go = 0;
 	va_start(args, format);
-	while (format[i] && i >= 0)
+	while (format[i])
 	{
 		if (format[i] == '%')
 		{
@@ -29,7 +29,11 @@ int	ft_printf(const char *format, ...)
 			go += options(format[i], args);
 		}
 		else
-			write(1, &format[i], 1);
+		{
+			go += write(1, &format[i], 1);
+		}
+		if (go < 0)
+			break;
 		i++;
 	}
 	va_end(args);

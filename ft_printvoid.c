@@ -16,6 +16,8 @@ int	ft_printvoid(void *v)
 {
 	unsigned long	n;
 
+	if (!v)
+		return (write(1, "(nil)", 5));
 	n = (unsigned long)v;
 	write(1, "0x", 2);
 	return (ft_printhex(n, "0123456789abcdef") + 2);

@@ -17,15 +17,7 @@ int	ft_printchar(int n)
 	char	c;
 
 	c = (char)n;
-	if ((c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A'))
-	{
+	if (c >= 0 && c <= 127)
 		write(1, &c, 1);
-		return (1);
-	}
-	else if (c == '%')
-	{
-		write(1, "%", 1);
-		return (1);
-	}
-	return (-2);
+	return (1);
 }

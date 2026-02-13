@@ -24,7 +24,7 @@ int	ft_printstring(char *str)
 	}
 	while (str[i])
 	{
-		write(1, &str[i], 1);
+		ft_printchar(str[i]);
 		i++;
 	}
 	return (i);
