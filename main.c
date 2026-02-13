@@ -20,9 +20,10 @@ int	main(void)
 	char	*str;
 
 	i = 1000;
-	c = 'c';
+	c = 0;
+	close(1);
 	str = "sdad";
-	printf("Test Original: %c\n", c);
-	ft_printf("Test ft: %c\n", c);
+	printf("Test Original: %s\n", NULL);
+	ft_printf("Test ft: %s\n", NULL);
 	return (0);
 }
