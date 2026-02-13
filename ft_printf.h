@@ -6,7 +6,7 @@
 /*   By: tide-oli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 14:53:15 by tide-oli          #+#    #+#             */
-/*   Updated: 2026/02/12 23:50:37 by tide-oli         ###   ########.fr       */
+/*   Updated: 2026/02/13 20:20:50 by tide-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@
 
 int	ft_printf(const char *format, ...);
 int	options(int c, va_list args);
-int	ft_printchar(int c);
 int	ft_printstring(char *str);
-int	ft_printhex(unsigned int n, char *base);
 int	ft_printvoid(void *v);
-int	ft_printnumbers(int n);
+int	ft_printchar(int c);
+int	ft_signednumber(int n);
+int	ft_printnumbers(unsigned int n);
+int	ft_printhex(unsigned int n, char *base);
 #endif
