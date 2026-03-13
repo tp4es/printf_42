@@ -6,7 +6,7 @@
 /*   By: tide-oli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 14:51:26 by tide-oli          #+#    #+#             */
-/*   Updated: 2026/02/12 23:48:54 by tide-oli         ###   ########.fr       */
+/*   Updated: 2026/03/13 20:09:23 by tide-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_printf(const char *format, ...)
 			go += write(1, &format[i], 1);
 		}
 		if (go < 0)
-			break;
+			break ;
 		i++;
 	}
 	va_end(args);

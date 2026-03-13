@@ -6,14 +6,14 @@
 #    By: tide-oli <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/12 17:50:53 by tide-oli          #+#    #+#              #
-#    Updated: 2026/02/12 23:54:13 by tide-oli         ###   ########.fr        #
+#    Updated: 2026/03/13 20:07:31 by tide-oli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME= libftprintf.a
-INCLUDE= ft_printf.h
+NAME = libftprintf.a
+INCLUDE = ft_printf.h
 
-SRC= 	ft_printf.c			\
+SRC = ft_printf.c			\
 		options.c			\
 		ft_printhex.c		\
 		ft_printchar.c		\
@@ -23,12 +23,11 @@ SRC= 	ft_printf.c			\
 
 OBJ = $(SRC:.c=.o)
 
-CC= cc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-RM= rm -f
-AR= ar rcs
-RN= ranlib
+RM = rm -f
+AR = ar rcs
 
 .PHONY: all clean fclean re
 
