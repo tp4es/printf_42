@@ -1,4 +1,4 @@
-*Este proyecto ha sido creado como parte del currículo de 42 por tpaes.*
+*Este proyecto ha sido creado como parte del currículo de 42 por tide-oli.*
 
 # ft_printf
 

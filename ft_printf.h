@@ -23,5 +23,5 @@ int	ft_printvoid(void *v);
 int	ft_printchar(int c);
 int	ft_signednumber(int n);
 int	ft_printnumbers(unsigned int n);
-int	ft_printhex(unsigned int n, char *base);
+int	ft_printhex(unsigned long n, char *base);
 #endif

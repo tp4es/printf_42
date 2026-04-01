@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_printhex(unsigned int n, char *base)
+int	ft_printhex(unsigned long n, char *base)
 {
 	int	i;
 
